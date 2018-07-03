@@ -1,6 +1,8 @@
 (ns page-generator.handler-test
   (:require [clojure.test :refer :all]
             [clojure.data.json :as json]
+            [net.cgrand.enlive-html :as eh]
+            [clojure.java.io :as io]
             [ring.mock.request :as mock]
             [page-generator.handler :refer :all])
   (:import [java.net URLEncoder]))
@@ -47,16 +49,17 @@
 ;;   "file:///Users/pyskell/Downloads/dist/skku.html"
 ;;   uinf sf)
 ;; 
-;; (print (apply str ((eh/template
-;;  (io/as-url "file:///Users/pyskell/Downloads/dist/skku.html")
-;;    []
-;;    [:head :link] (fn [node]
-;;                    (println node)
-;;                    (update-in node
-;;                               [:attrs :href]
-;;                               (fn [old-value prefix]
-;;                                 (str prefix old-value))
-;;                               "http://54.223.139.77/dist_0620/"))))))
+(print (apply str ((eh/template
+ ;; (io/as-url "file:///Users/pyskell/Downloads/dist/skku.html")
+ (io/resource "dist_0620_new/skku.html")
+   []
+   [:head :link] (fn [node]
+                   (println node)
+                   (update-in node
+                              [:attrs :href]
+                              (fn [old-value prefix]
+                                (str prefix old-value))
+                              "http://54.223.139.77/dist_0620/"))))))
 ;; 
 ;; (deftest test-app
 ;;   (testing "main route"
