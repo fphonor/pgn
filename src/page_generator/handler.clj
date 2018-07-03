@@ -46,7 +46,7 @@
              [:attrs :href]
              (fn [old-value prefix]
                (str prefix old-value))
-             "http://54.223.139.77/dist_0620/"))
+             "http://129.0.2.66/dist_0620/"))
 
 (defmacro get-html-content-template
   [url-str user-info selector-transforms]
@@ -56,17 +56,6 @@
      []
      [:head :link] link-transform
      ~@(apply concat keyword-selector-transforms))))
-
-(print (apply str ((eh/template
- (io/as-url "file:///Users/pyskell/Downloads/dist/skku.html")
-   []
-   [:head :link] (fn [node]
-                   (println node)
-                   (update-in node
-                              [:attrs :href]
-                              (fn [old-value prefix]
-                                (str prefix old-value))
-                              "http://54.223.139.77/dist_0620/"))))))
 
 
 (defn get-proper-html-content
