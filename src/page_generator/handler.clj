@@ -14,7 +14,7 @@
             [clojure.java.io :as io]))
 
 (timbre/merge-config!
-    {:appenders {:spit (appenders/spit-appender {:fname "pgn.log"})}})
+    {:appenders {:spit (appenders/spit-appender {:fname "log/pgn.log"})}})
 
 (print (sort (keys e/env)))
 (e/env :user-country)
