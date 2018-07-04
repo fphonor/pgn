@@ -1,0 +1,12 @@
+mv 哥伦比亚大学（无）.jpg bg-columbia.jpg
+mv 巴黎高等师范学院（无）.jpg bg-ens.jpg
+mv 复旦大学（无）.jpg bg-fudan.jpg
+mv 哈佛大学（无）.jpg bg-harvard.jpg
+mv 伦敦国王学院（无）.jpg bg-kcl.jpg
+mv 莱顿大学（无）.jpg bg-leiden.jpg
+mv 南京大学（无）.jpg bg-nanjing.jpg
+mv 渥太华大学（无）.jpg bg-ottawa.jpg
+mv 北京大学（无）.jpg bg-peking.jpg
+mv 丽泽大学（无）.jpg bg-reitaku.jpg
+mv 成均馆大学（无）.jpg bg-skku.jpg
+mv 清华大学（无）.jpg bg-tsinghua.jpg
